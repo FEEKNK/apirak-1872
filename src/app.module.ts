@@ -9,8 +9,7 @@ import { TransactionsModule } from './modules/transactions/transactions.module';
 import { CategoryModule } from './modules/category/category.module';
 import { GoalsModule } from './modules/goals/goals.module';
 import { ModulesModule } from './auth/modules/modules.module';
-import { AuthController } from './auth/auth.controller';
-import { AuthService } from './auth/auth.service';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -30,9 +29,9 @@ import { AuthService } from './auth/auth.service';
     CategoryModule,
     GoalsModule,
     ModulesModule,
-
+    AuthModule,
   ],
-  controllers: [AppController, AuthController],
-  providers: [AppService, AuthService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
